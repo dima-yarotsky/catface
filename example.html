@@ -42,19 +42,18 @@
             <div class="row justify-content-md-center" data-bind="visible: !isImageLoaded()">
                 <div class="col-md-auto">
                     <input id="imageInput" data-bind="event: {change: readImage}" type="file" style="display: none;" />
-                    <div data-bind="event: {dragover: dragover, dragleave: dragleave, drop: drop, click: inputClick}" class="droppable">
+                    <div id="imageInputDrop" data-bind="event: {dragover: dragover, dragleave: dragleave, drop: drop, click: inputClick}" class="droppable">
                         Перетащите свою фотографию сюда или кликните для загрузки
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-7"></div>
+                <div class="col-8"></div>
                 <div class="col-1 text-right">
                     <label class="loader" data-bind="visible: isInProgress"></label>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                     <button type="button" class="btn btn-primary" data-bind="click: replaceFaces, enable: isImageLoaded">Выполнить</button>
-                    <button type="button" class="btn btn-success" data-bind="click: saveImage, enable: isImageProcessed">Сохранить</button>
                     <button type="button" class="btn btn-danger" data-bind="click: deleteImage, enable: isImageLoaded">Отмена</button>
                 </div>
             </div>

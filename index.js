@@ -13,7 +13,7 @@ var ImageViewModel = function () {
     self.isImageProcessed = ko.observable(false);
     self.sourceImage = new Image();
 
-    var dropElement = $('.droppable');
+    var dropElement = $('#imageInputDrop')[0];
     var canvas = $('#canvas')[0];
     var canvasContext = canvas.getContext('2d');
     var catImage = new Image();
@@ -28,7 +28,7 @@ var ImageViewModel = function () {
 
     self.drop = function (data, e) {
         dropElement.classList.remove('dragover');
-        self.create(data, e.originalEvent);
+        self.readImage(data, e.originalEvent);
     }
 
     self.inputClick = function () {
@@ -71,11 +71,6 @@ var ImageViewModel = function () {
         canvasContext.clearRect(0, 0, canvas.width, canvas.height);
         $('#imageInput')[0].value = '';
     };
-
-    self.saveImage = function () {
-        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        window.location.href = image;
-    }
 
     function setImageSource(source) {
         self.sourceImage.src = source;

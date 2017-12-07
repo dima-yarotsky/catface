@@ -73,7 +73,8 @@ var ImageViewModel = function () {
     };
 
     self.saveImage = function () {
-        window.location = canvas.toDataURL('image/jpg');
+        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        window.location.href = image;
     }
 
     function setImageSource(source) {

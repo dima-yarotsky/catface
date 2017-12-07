@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Дима Яроцкий - catface</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-lights">
+                <a class="navbar-brand" href="about.html">Дмитрий Яроцкий</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Распознавание образов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="face-recognition.html">Распознавание лиц</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="microsoft-face-api.html">Microsoft Face API</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="example.html">Пример использования</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="jumbotron">
+            <h1>Теория распознавания образа</h1>
+            <p class="text-justify">Теория распознавания образа — раздел информатики и смежных дисциплин, развивающий основы и методы классификации
+                и идентификации предметов, явлений, процессов, сигналов, ситуаций и т. п. объектов, которые характеризуются
+                конечным набором некоторых свойств и признаков. Такие задачи решаются довольно часто, например, при переходе
+                или проезде улицы по сигналам светофора. Распознавание цвета загоревшейся лампы светофора и знание правил
+                дорожного движения позволяет принять правильное решение о том, можно или нельзя переходить улицу. Необходимость
+                в таком распознавании возникает в самых разных областях — от военного дела и систем безопасности до оцифровки
+                аналоговых сигналов.
+                <br />
+                <br /> Проблема распознавания образа приобрела выдающееся значение в условиях информационных перегрузок, когда
+                человек не справляется с линейно-последовательным пониманием поступающих к нему сообщений, в результате чего
+                его мозг переключается на режим одновременности восприятия и мышления, которому такое распознавание свойственно.
+                Неслучайно, таким образом, проблема распознавания образа оказалась в поле междисциплинарных исследований
+                - в том числе в связи с работой по созданию искусственного интеллекта, а создание технических систем распознавания
+                образа привлекает к себе всё большее внимание.</p>
+
+            <ul class="list-group">
+                <p class="font-italic">Примеры задач распознавания образов:</p>
+                <li class="list-group-item list-group-item-info">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%81%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D0%BE%D0%B2">Оптическое распознавание символов</a>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%A8%D1%82%D1%80%D0%B8%D1%85-%D0%BA%D0%BE%D0%B4">Распознавание штрих-кодов</a>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5_%D0%BD%D0%BE%D0%BC%D0%B5%D1%80%D0%B0">Распознавание автомобильных номеров</a>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%81%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BB%D0%B8%D1%86">Распознавание лиц</a>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%81%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%80%D0%B5%D1%87%D0%B8">Распознавание речи</a>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2">Классификация документов</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+body {
+    padding: 50px;
+}
+
+.canvas {
+    width: 1024px;
+    height: 768px;
+}
+
+.droppable {
+    width: 1024px;
+    height: 500px;
+    background-color: white;
+    outline: 2px dashed lightgray;
+    outline-offset: -10px;
+    padding: 240px 0;
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+
+.droppable.dragover {
+    background: lightgray;
+}
+
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 2s linear infinite;
+    vertical-align:bottom;
+    text-align: right;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

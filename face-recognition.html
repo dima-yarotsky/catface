@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Дима Яроцкий - catface</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-lights">
+                <a class="navbar-brand" href="about.html">Дмитрий Яроцкий</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Распознавание образов</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Распознавание лиц</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="microsoft-face-api.html">Microsoft Face API</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="example.html">Пример использования</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="jumbotron">
+            <h1>Распознавание лиц</h1>
+            <img src="face-api.jpg" class="rounded mx-auto d-block">
+            <br/>
+            <p class="text-justify">Распознавание лиц — практическое приложение теории распознавания образов, в задачу которого входит автоматическая
+                локализация лица на фотографии и, в случае необходимости, идентификация персоны по лицу. Функцию идентификации
+                людей на фотографиях уже активно используют в программном обеспечении для управления фотоальбомами (Picasa,
+                iPhoto и др.).
+                <ul class="list-group">
+                    <p class="font-italic">Основные характеристики:</p>
+                    <li class="list-group-item list-group-item-info">
+                        Возможность поиска и распознавания нескольких лиц
+                    </li>
+                    <li class="list-group-item list-group-item-info">
+                        Устойчивость к изменениям в прическе, наличию/отсутствию усов и бороды, очкам (кроме солнцезащитных), возрастным изменениям
+                        (кроме детей), поворотам (до 30 градусов)
+                    </li>
+                    <li class="list-group-item list-group-item-info">
+                        Возможность привязки к изображениям ключевых слов (например, «политик», «бизнесмен» и т.д.) и краткого описания для дальнейшей
+                        автоматической классификации обрабатываемого контента
+                    </li>
+                    <li class="list-group-item list-group-item-info">
+                        Вывод результатов распознавания в виде простого текста, либо XML-документа, включающего информацию о положении и размере
+                        найденных лиц, результатах распознавания и временных метках
+                    </li>
+                    <li class="list-group-item list-group-item-info">
+                        Слабая зависимость скорости работы от размера используемой галереи лиц. Например, при увеличении галереи со 100 до 1000 лиц,
+                        скорость работы уменьшается менее чем на 10%
+                    </li>
+                </ul>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

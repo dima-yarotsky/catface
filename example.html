@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Дима Яроцкий - catface</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-lights">
+                <a class="navbar-brand" href="about.html">Дмитрий Яроцкий</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Распознавание образов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="face-recognition.html">Распознавание лиц</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="microsoft-face-api.html">Microsoft Face API</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Пример использования</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="jumbotron">
+            <div class="row justify-content-md-center" data-bind="visible: isImageLoaded">
+                <div class="col-md-auto">
+                    <canvas id="canvas" class="canvas" />
+                </div>
+            </div>
+            <div class="row justify-content-md-center" data-bind="visible: !isImageLoaded()">
+                <div class="col-md-auto">
+                    <input id="imageInput" data-bind="event: {change: readImage}" type="file" style="display: none;" />
+                    <div data-bind="event: {dragover: dragover, dragleave: dragleave, drop: drop, click: inputClick}" class="droppable">
+                        Перетащите свою фотографию сюда или кликните для загрузки
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7"></div>
+                <div class="col-1 text-right">
+                    <label class="loader" data-bind="visible: isInProgress"></label>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary" data-bind="click: replaceFaces, enable: isImageLoaded">Выполнить</button>
+                    <button type="button" class="btn btn-success" data-bind="click: saveImage, enable: isImageProcessed">Сохранить</button>
+                    <button type="button" class="btn btn-danger" data-bind="click: deleteImage, enable: isImageLoaded">Отмена</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
